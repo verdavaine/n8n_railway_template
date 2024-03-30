@@ -22,18 +22,5 @@ ENV N8N_BASIC_AUTH_PASSWORD=$PASSWORD
 
 ENV ENABLE_ALPINE_PRIVATE_NETWORKING=true
 
-RUN ls -la /home/node/
-RUN ls -la /home/node/.n8n
-
-# Change to the new n8n directory
-WORKDIR /home/node/.n8n
-
-# Ensure the 'node' user owns the /home/node/.n8n directory
-# This is crucial for permission management
-RUN chown -R node:node /home/node/.n8n
-
-# Switch to 'node' user for security purposes
-USER node
-
 # Start n8n with the 'start' command
-CMD ["/home/node/.n8n/n8n", "start"]
+CMD ["start"]
