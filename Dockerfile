@@ -33,4 +33,4 @@ RUN chown -R node:node /home/node/.n8n
 USER node
 
 # Start n8n with the 'start' command
-CMD ["/home/node/.n8n", "start"]
+CMD ["ls", /home/node/]
