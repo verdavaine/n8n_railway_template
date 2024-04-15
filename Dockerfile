@@ -23,3 +23,6 @@ ENV N8N_BASIC_AUTH_PASSWORD=$PASSWORD
 ENV ENABLE_ALPINE_PRIVATE_NETWORKING=true
 
 ENV TINI_SUBREAPER=true
+
+# Start n8n with the 'start' command
+CMD ["start"]
